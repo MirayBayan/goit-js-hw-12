@@ -1,23 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>JavaScript Homework 11</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <form class="search-form">
+      <input type="text" name="searchQuery" placeholder="Search images..." />
+      <button type="submit">Search</button>
+    </form>
+    <div class="loader-container is-hidden">
+      <span class="loader"></span>
+      <p>Yükleniyor...</p>
+    </div>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
-
-    <load src="./partials/footer.html" />
-
+    <ul class="gallery"></ul>
+    <button type="button" class="load-more is-hidden">Load more</button>
+    <p class="end-message is-hidden">
+      We're sorry, but you've reached the end of search results
+    </p>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
